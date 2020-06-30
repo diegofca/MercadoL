@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pN7-rL-Wor">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--API Mercadolibre-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MercadoLibre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="F7j-06-lZK">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LLm-rr-FEz">
+                                <rect key="frame" x="0.0" y="196" width="414" height="666"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="BKS-E9-SWB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8j6-i5-fnQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LLm-rr-FEz" firstAttribute="top" secondItem="F7j-06-lZK" secondAttribute="bottom" id="1YL-KL-fNP"/>
+                            <constraint firstItem="F7j-06-lZK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BB1-u4-MWN"/>
+                            <constraint firstItem="LLm-rr-FEz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KdY-fx-A5c"/>
+                            <constraint firstItem="F7j-06-lZK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oc7-je-3qs"/>
+                            <constraint firstItem="F7j-06-lZK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qi1-su-Ooc"/>
+                            <constraint firstItem="LLm-rr-FEz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sy0-Sr-JG9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LLm-rr-FEz" secondAttribute="trailing" id="vrC-Cr-3u0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="API Mercadolibre" leftItemsSupplementBackButton="YES" id="thk-ea-53J">
+                        <barButtonItem key="backBarButtonItem" title=" " id="8nU-rV-81L"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="categoriesTableView" destination="LLm-rr-FEz" id="Lx3-Pe-3bk"/>
+                        <outlet property="searchBar" destination="F7j-06-lZK" id="al1-h0-MTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="-206.25"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="SY6-kG-QZr">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZG6-dH-UVu" customClass="ProductDetailViewController" customModule="MercadoLibre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dTw-LU-mBL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-uM-UJP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZG6-dH-UVu" id="z7d-Qv-2aJ"/>
+                                    <outlet property="delegate" destination="ZG6-dH-UVu" id="4xl-tV-P7V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9096543789" green="0.89753621819999996" blue="0.86786991359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YVf-WC-Xkn" firstAttribute="trailing" secondItem="jmY-uM-UJP" secondAttribute="trailing" id="9LK-rU-Hqp"/>
+                            <constraint firstItem="jmY-uM-UJP" firstAttribute="leading" secondItem="YVf-WC-Xkn" secondAttribute="leading" id="XLT-Qw-35A"/>
+                            <constraint firstAttribute="bottom" secondItem="jmY-uM-UJP" secondAttribute="bottom" id="Zgx-0G-cGU"/>
+                            <constraint firstItem="jmY-uM-UJP" firstAttribute="top" secondItem="YVf-WC-Xkn" secondAttribute="top" id="be5-1u-FkW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YVf-WC-Xkn"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jmY-uM-UJP" id="4gT-i0-Zbi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwS-Vy-Upe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2520" y="-206"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Xh-ht-39U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pN7-rL-Wor" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="GY8-aI-Bq6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SeU-CS-GSb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fFu-ll-bWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109" y="-206"/>
+        </scene>
+        <!--Busqueda-->
+        <scene sceneID="olW-e2-vbW">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tfx-uz-e0e" customClass="SearchViewController" customModule="MercadoLibre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D4e-ev-RYW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="igJ-ne-5gU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tfx-uz-e0e" id="tYN-XO-hTT"/>
+                                    <outlet property="delegate" destination="tfx-uz-e0e" id="FwL-hQ-mhM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PmI-Pr-nU2" firstAttribute="bottom" secondItem="igJ-ne-5gU" secondAttribute="bottom" id="90t-Uo-OKj"/>
+                            <constraint firstItem="igJ-ne-5gU" firstAttribute="leading" secondItem="PmI-Pr-nU2" secondAttribute="leading" id="CVg-KU-675"/>
+                            <constraint firstItem="igJ-ne-5gU" firstAttribute="top" secondItem="PmI-Pr-nU2" secondAttribute="top" id="UZC-Gc-9Or"/>
+                            <constraint firstItem="PmI-Pr-nU2" firstAttribute="trailing" secondItem="igJ-ne-5gU" secondAttribute="trailing" id="VLj-Uw-yxa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PmI-Pr-nU2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Busqueda" leftItemsSupplementBackButton="YES" id="xrB-Tg-Q2I"/>
+                    <connections>
+                        <outlet property="productsTableView" destination="igJ-ne-5gU" id="FDe-Bc-RMJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cj-Rj-YRX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757" y="-206"/>
+        </scene>
+    </scenes>
+</document>
